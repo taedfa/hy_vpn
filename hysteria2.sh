@@ -7,6 +7,10 @@ GREEN="\033[32m"
 YELLOW="\033[33m"
 PLAIN="\033[0m"
 
+# 在这里直接填写你想要的固定端口，方便本地映射服务，例如 10809
+port=10809 
+
+
 red(){
     echo -e "\033[31m\033[01m$1\033[0m"
 }
@@ -150,11 +154,6 @@ inst_cert(){
 
 inst_port(){
     iptables -t nat -F PREROUTING >/dev/null 2>&1
-
-    # --- 修改部分开始：固定端口 ---
-    # 在这里直接填写你想要的固定端口，例如 45629
-    port=45629 
-    # --- 修改部分结束 ---
 
     if [[ -n $(ss -tunlp | grep -w udp | awk '{print $5}' | sed 's/.*://g' | grep -w "$port") ]]; then
         red "错误: 端口 $port 已经被其他程序占用，请先检查或更换端口！脚本停止运行。"
