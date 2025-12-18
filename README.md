@@ -11,11 +11,12 @@ git clone https://github.com/taedfa/hy_vpn.git && unzip hy_vpn.zip && chmod +x h
 ```bash
 cd hy_vpn
 ```
-##固定本地端口
+## 固定本地端口
 ```bash
 bash hysteria2.sh
 ```
-##随机本地端口
+## 随机本地端口
 ```bash
 bash hysteria2.sh
 ```
+
