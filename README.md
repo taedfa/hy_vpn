@@ -19,5 +19,9 @@ bash hysteria2.sh
 ```bash
 bash hysteria.sh
 ```
+# 一键安装vless
+```bash
+bash vless.sh
+```
 
 
