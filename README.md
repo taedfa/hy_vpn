@@ -17,6 +17,7 @@ bash hysteria2.sh
 ```
 ## 随机本地端口
 ```bash
-bash hysteria2.sh
+bash hysteria.sh
 ```
+
 
